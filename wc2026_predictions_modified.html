@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>توقعات كأس العالم 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Cairo','Segoe UI',sans-serif;direction:rtl;background:#0d1117;color:#e6edf3;min-height:100vh}
+.hdr{background:linear-gradient(135deg,#0f2318,#0d1a2e);border-bottom:2px solid #c9a84c;position:sticky;top:0;z-index:200}
+.hdr-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.hdr-left{display:flex;align-items:center;gap:10px}
+.trophy{width:44px;height:44px;background:linear-gradient(135deg,#c9a84c,#8a6a1e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 0 16px rgba(201,168,76,.5);animation:glow 3s ease-in-out infinite;flex-shrink:0}
+@keyframes glow{0%,100%{box-shadow:0 0 16px rgba(201,168,76,.35)}50%{box-shadow:0 0 28px rgba(201,168,76,.7)}}
+.hdr-title{font-size:1.05rem;font-weight:900;color:#c9a84c}
+.hdr-sub{font-size:.68rem;color:#8892a4;margin-top:1px}
+.hdr-right{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.grp-pill{background:linear-gradient(135deg,#c9a84c,#8a6a1e);color:#000;font-weight:700;font-size:.72rem;padding:4px 12px;border-radius:20px;display:none}
+.nav-btn{background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#c9a84c;font-family:'Cairo',sans-serif;font-size:.72rem;font-weight:600;padding:5px 12px;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav-btn:hover{background:rgba(201,168,76,.12)}
+.dl-bar{background:linear-gradient(90deg,#140800,#221000,#140800);border-bottom:1px solid #c9a84c22;padding:6px 16px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:.74rem}
+.dl-label{color:#8892a4}
+.dl-units{display:flex;gap:5px;align-items:center}
+.dl-box{background:#221a00;border:1px solid #3d3000;border-radius:6px;padding:3px 9px;text-align:center;min-width:46px}
+.dl-num{font-size:.95rem;font-weight:900;color:#c9a84c;line-height:1.2}
+.dl-lbl{font-size:.55rem;color:#8892a4}
+.dl-sep{color:#3d3000;font-weight:700}
+.dl-bar.expired .dl-box{background:#220000;border-color:#3d0000}.dl-bar.expired .dl-num{color:#f85149}
+.dl-bar.urgent .dl-num{color:#f97316}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem 1rem 3rem}
+.card{background:linear-gradient(135deg,#161b22,#191f2b);border:1px solid #30363d;border-radius:12px;padding:1rem 1.2rem;margin-bottom:.85rem;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:5px}
+.card-title{font-size:.95rem;font-weight:700;color:#e6edf3;display:flex;align-items:center;gap:5px}
+.badge{font-size:.68rem;padding:2px 9px;border-radius:20px;background:#1f3a5c;color:#79c0ff;border:1px solid #1f6feb33}
+.sec-lbl{font-size:.72rem;font-weight:700;color:#6e7681;margin-bottom:7px;display:flex;align-items:center;gap:4px;border-bottom:1px solid #21262d;padding-bottom:5px;text-transform:uppercase;letter-spacing:.4px}
+.notice{font-size:.74rem;color:#8892a4;padding:7px 10px;background:#161b22;border-radius:7px;border:1px solid #21262d;margin-bottom:8px}
+.inp{width:100%;font-size:.82rem;padding:7px 11px;border:1px solid #30363d;border-radius:8px;background:#0d1117;color:#e6edf3;font-family:'Cairo',sans-serif;transition:border-color .2s}
+.inp:focus{outline:none;border-color:#c9a84c}
+.inp:disabled{opacity:.38;cursor:not-allowed}
+.field{display:flex;flex-direction:column;gap:3px}
+.field label{font-size:.68rem;font-weight:700;color:#6e7681;text-transform:uppercase;letter-spacing:.3px}
+.btn{background:linear-gradient(135deg,#c9a84c,#8a6a1e);color:#000;border:none;border-radius:20px;padding:7px 16px;font-size:.8rem;cursor:pointer;font-weight:700;font-family:'Cairo',sans-serif;transition:opacity .15s;display:inline-flex;align-items:center;gap:4px}
+.btn:hover{opacity:.88}
+.btn:disabled{opacity:.38;cursor:not-allowed}
+.btn-sm{font-size:.72rem;padding:4px 11px;border-radius:20px;border:1px solid #30363d;cursor:pointer;background:#161b22;color:#8892a4;font-family:'Cairo',sans-serif;font-weight:600;transition:all .15s}
+.btn-sm:hover{border-color:#c9a84c;color:#c9a84c}
+.btn-sm.ok{background:linear-gradient(135deg,#c9a84c,#8a6a1e);color:#000;border-color:transparent}
+.btn-sm.red:hover{border-color:#f85149;color:#f85149}
+/* LOCK */
+.lock-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0d1117;padding:1rem}
+.lock-card{background:linear-gradient(135deg,#161b22,#1a1f2e);border:1px solid #30363d;border-radius:18px;padding:2.2rem 1.8rem;text-align:center;max-width:340px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.lock-ico{font-size:2.6rem;margin-bottom:.6rem;display:block;animation:glow 3s ease-in-out infinite}
+.lock-title{font-size:1.15rem;font-weight:900;color:#c9a84c;margin-bottom:.2rem}
+.lock-sub{font-size:.74rem;color:#6e7681;margin-bottom:1.3rem}
+.lock-inp{width:100%;font-size:1rem;padding:10px 14px;border:2px solid #30363d;border-radius:10px;background:#0d1117;color:#e6edf3;text-align:center;letter-spacing:.3rem;font-family:monospace;margin-bottom:.65rem;transition:border-color .2s}
+.lock-inp:focus{outline:none;border-color:#c9a84c}
+.lock-btn{width:100%;background:linear-gradient(135deg,#c9a84c,#8a6a1e);color:#000;border:none;border-radius:10px;padding:10px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Cairo',sans-serif}
+.lock-err{font-size:.74rem;color:#f85149;min-height:1.1rem;margin-top:.35rem}
+.lock-hint{font-size:.65rem;color:#3d444d;margin-top:1rem}
+.lock-hint strong{color:#c9a84c88}
+/* HOME */
+.home-hero{text-align:center;padding:2rem 1rem 1.2rem;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06) 0%,transparent 65%)}
+.home-hero h2{font-size:1.6rem;font-weight:900;color:#c9a84c;margin-bottom:.3rem}
+.home-hero p{font-size:.8rem;color:#8892a4}
+.home-flags{font-size:1.6rem;margin-bottom:.6rem;letter-spacing:.35rem}
+.grp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:1.2rem}
+.grp-card{background:linear-gradient(135deg,#161b22,#1a1f2e);border:1px solid #30363d;border-radius:12px;padding:1rem 1.1rem;cursor:pointer;transition:all .2s}
+.grp-card:hover{border-color:#c9a84c;transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,.1)}
+.grp-ico{font-size:1.7rem;margin-bottom:.35rem}
+.grp-nm{font-size:.88rem;font-weight:700;color:#e6edf3}
+.grp-dc{font-size:.68rem;color:#6e7681;margin-top:1px}
+.grp-ft{display:flex;justify-content:space-between;align-items:center;margin-top:.65rem}
+.grp-cnt{font-size:.68rem;color:#56d364;font-weight:600}
+.grp-arr{font-size:.72rem;color:#c9a84c;font-weight:700}
+/* ADMIN */
+.admin-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.admin-title{font-size:1rem;font-weight:900;color:#c9a84c}
+.admin-sub{font-size:.7rem;color:#6e7681;margin-top:2px}
+.results-card{background:linear-gradient(135deg,#161200,#211a00);border:1px solid #c9a84c33;border-radius:12px;padding:1rem 1.2rem;margin-bottom:.85rem}
+.shared-badge{display:inline-flex;align-items:center;gap:4px;background:#c9a84c;color:#000;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:20px}
+.pw-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.pw-inp{flex:1;min-width:120px;font-size:.8rem;padding:5px 10px;border:1px solid #30363d;border-radius:20px;background:#0d1117;color:#e6edf3;font-family:'Cairo',sans-serif}
+.pw-inp:focus{outline:none;border-color:#c9a84c}
+.add-row{display:grid;grid-template-columns:1fr 1fr auto;gap:7px;align-items:end;margin-bottom:6px}
+@media(max-width:500px){.add-row{grid-template-columns:1fr}}
+.quick-row{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-top:5px}
+.grp-list{display:flex;flex-direction:column;gap:7px}
+.grp-item{background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;transition:border-color .2s}
+.grp-item:hover{border-color:#3d444d}
+.gi-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.gi-left{display:flex;align-items:center;gap:8px}
+.gi-emoji{font-size:1.4rem}
+.gi-name{font-size:.85rem;font-weight:700;color:#e6edf3}
+.gi-desc{font-size:.68rem;color:#6e7681;margin-top:1px}
+.gi-right{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.cnt-badge{font-size:.65rem;padding:2px 7px;border-radius:10px;background:#0d2818;color:#56d364;font-weight:700;border:1px solid #1a4a2e}
+.link-box{background:#090d12;border:1px solid #30363d;border-radius:6px;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.link-val{font-family:monospace;font-size:.68rem;color:#79c0ff;flex:1;word-break:break-all}
+/* PRED */
+.locked-bar{background:#1a0000;border:1px solid #f85149;border-radius:10px;padding:.8rem 1rem;margin-bottom:.85rem;display:flex;align-items:center;gap:8px}
+.locked-bar .li{font-size:1.2rem}
+.locked-bar .lt{font-size:.85rem;font-weight:700;color:#f85149}
+.locked-bar .ls{font-size:.68rem;color:#8892a4;margin-top:1px}
+.warn-bar{background:#1a0800;border:1px solid #e6a817;border-radius:10px;padding:.7rem 1rem;margin-bottom:.85rem;display:flex;align-items:center;gap:7px}
+.warn-bar span{font-size:.76rem;color:#e6a817;font-weight:600}
+.prow{display:flex;gap:7px;align-items:center;margin-bottom:7px;flex-wrap:wrap}
+.prow .inp{max-width:210px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:.76rem;padding:3px 10px;border-radius:20px;background:#21262d;border:1px solid #30363d;color:#e6edf3}
+.tag .x{cursor:pointer;color:#6e7681;font-size:.8rem;transition:color .15s}
+.tag .x:hover{color:#f85149}
+.ptabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.85rem}
+.ptab{font-size:.76rem;padding:5px 13px;border-radius:20px;border:1px solid #30363d;cursor:pointer;background:#161b22;color:#8892a4;transition:all .15s;font-family:'Cairo',sans-serif}
+.ptab:hover{border-color:#c9a84c44;color:#c9a84c}
+.ptab.active{background:linear-gradient(135deg,#c9a84c,#8a6a1e);color:#000;border-color:transparent;font-weight:700}
+.lb{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1rem}
+.lb-c{background:#21262d;border:1px solid #30363d;border-radius:9px;padding:9px 14px;text-align:center;min-width:75px}
+.lb-c.top{background:linear-gradient(135deg,#261c00,#161000);border:2px solid #c9a84c;box-shadow:0 0 12px rgba(201,168,76,.18)}
+.lb-nm{font-size:.68rem;color:#8892a4;margin-bottom:1px}
+.lb-pts{font-size:1.4rem;font-weight:900;color:#c9a84c}
+.lb-sub{font-size:.6rem;color:#6e7681}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(164px,1fr));gap:7px}
+.gbox{border:1px solid #30363d;border-radius:9px;padding:8px;background:#0d1117}
+.glabel{font-size:.72rem;font-weight:700;color:#c9a84c;margin-bottom:6px}
+.rrow{display:flex;align-items:center;gap:4px;margin-bottom:4px}
+.rpill{font-size:.6rem;padding:1px 6px;border-radius:7px;font-weight:700;white-space:nowrap}
+.r1{background:#2d1f00;color:#e6a817;border:1px solid #4a3300}
+.r2{background:#0d2137;color:#79c0ff;border:1px solid #1f4a7a}
+.r3{background:#0d2818;color:#56d364;border:1px solid #1a4a2e}
+select{width:100%;font-size:.72rem;padding:4px 5px;border:1px solid #30363d;border-radius:5px;background:#161b22;color:#e6edf3;cursor:pointer;font-family:'Cairo',sans-serif;transition:border-color .2s}
+select:hover:not(:disabled){border-color:#c9a84c33}
+select:focus{outline:none;border-color:#c9a84c}
+select.sc{background:#0d2818!important;border-color:#56d364!important;color:#56d364!important}
+select.sp{background:#2d1f00!important;border-color:#e6a817!important;color:#e6a817!important}
+select.sw{background:#2d0f0f!important;border-color:#f85149!important;color:#f85149!important}
+select:disabled{opacity:.32;cursor:not-allowed}
+select option{background:#161b22}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(144px,1fr));gap:5px}
+.slot{display:flex;align-items:center;gap:3px}
+.snum{font-size:.6rem;min-width:14px;color:#6e7681;text-align:center}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(144px,1fr));gap:7px}
+.flabel{font-size:.72rem;color:#8892a4;margin-bottom:3px;display:flex;align-items:center;gap:3px}
+.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(164px,1fr));gap:7px}
+.abox{border:1px solid #30363d;border-radius:8px;padding:7px;background:#0d1117}
+.ainp{width:100%;font-size:.76rem;padding:5px 7px;border:1px solid #30363d;border-radius:5px;background:#161b22;color:#e6edf3;font-family:'Cairo',sans-serif}
+.ainp:focus{outline:none;border-color:#c9a84c}
+.ainp.sc{background:#0d2818!important;border-color:#56d364!important;color:#56d364!important}
+.ainp.sw{background:#2d0f0f!important;border-color:#f85149!important;color:#f85149!important}
+.ainp:disabled{opacity:.32;cursor:not-allowed}
+.legend{display:flex;flex-wrap:wrap;gap:5px;margin-top:.85rem}
+.leg{font-size:.66rem;padding:2px 8px;border-radius:20px}
+.pill-ok{background:#0d2818;color:#56d364;border:1px solid #1a4a2e}
+.pill-warn{background:#2d1f00;color:#e6a817;border:1px solid #4a3300}
+.pill-bad{background:#2d0f0f;color:#f85149;border:1px solid #4a1f1f}
+/* SPINNER */
+.spinner-wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:#0d1117}
+.spinner{width:40px;height:40px;border:3px solid #30363d;border-top-color:#c9a84c;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinner-txt{color:#8892a4;font-size:.85rem}
+/* SYNC INDICATOR */
+.sync{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#161b22;border:1px solid #30363d;padding:5px 14px;border-radius:20px;font-size:.72rem;color:#8892a4;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.sync.show{opacity:1}
+.sync.ok{color:#56d364;border-color:#1a4a2e}
+.sync.err{color:#f85149;border-color:#4a1f1f}
+.toast{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);background:#161b22;color:#e6edf3;border:1px solid #30363d;padding:8px 20px;border-radius:20px;font-size:.8rem;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:9999;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+.toast.show{opacity:1}
+@media(max-width:580px){.hdr-title{font-size:.88rem}.home-hero h2{font-size:1.3rem}.grp-grid{grid-template-columns:1fr 1fr}.add-row{grid-template-columns:1fr}}
+@media(max-width:380px){.grp-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="SCR_LOAD">
+  <div class="spinner-wrap">
+    <div class="spinner"></div>
+    <div class="spinner-txt">جارٍ الاتصال...</div>
+  </div>
+</div>
+
+<!-- LOCK -->
+<div id="SCR_LOCK" style="display:none">
+  <div class="lock-screen">
+    <div class="lock-card">
+      <span class="lock-ico">🔐</span>
+      <div class="lock-title">لوحة الإدارة</div>
+      <div class="lock-sub">محمية بكلمة سر · للمدير فقط</div>
+      <input type="password" id="lockPwd" class="lock-inp" placeholder="••••••••" autocomplete="off"/>
+      <button class="lock-btn" id="lockBtn">🔓 دخول</button>
+      <div class="lock-err" id="lockErr"></div>
+      <div class="lock-hint">كلمة السر الافتراضية: <strong>wc2026</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="SCR_APP" style="display:none">
+  <div class="hdr">
+    <div class="hdr-inner">
+      <div class="hdr-left">
+        <div class="trophy">🏆</div>
+        <div>
+          <div class="hdr-title">توقعات كأس العالم 2026</div>
+          <div class="hdr-sub" id="hSub">USA · Canada · Mexico · 48 فريق</div>
+        </div>
+      </div>
+      <div class="hdr-right">
+        <span style="font-size:1.1rem">🇺🇸🇨🇦🇲🇽</span>
+        <span class="grp-pill" id="grpPill"></span>
+        <button class="nav-btn" id="btnHome">🏠 الرئيسية</button>
+        <button class="nav-btn" id="btnAdmin">⚙️ إدارة</button>
+      </div>
+    </div>
+    <div class="dl-bar" id="dlBar">
+      <span class="dl-label">⏳ آخر موعد: الخميس 11 يونيو 2026 · 11 مساءً</span>
+      <div class="dl-units">
+        <div class="dl-box"><div class="dl-num" id="cdD">--</div><div class="dl-lbl">يوم</div></div>
+        <span class="dl-sep">:</span>
+        <div class="dl-box"><div class="dl-num" id="cdH">--</div><div class="dl-lbl">ساعة</div></div>
+        <span class="dl-sep">:</span>
+        <div class="dl-box"><div class="dl-num" id="cdM">--</div><div class="dl-lbl">دقيقة</div></div>
+        <span class="dl-sep">:</span>
+        <div class="dl-box"><div class="dl-num" id="cdS">--</div><div class="dl-lbl">ثانية</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- HOME -->
+    <div id="SCR_HOME" style="display:none">
+      <div class="home-hero">
+        <div class="home-flags">⚽🌍🏆</div>
+        <h2>توقعات كأس العالم 2026</h2>
+        <p>اختر مجموعتك وسجّل توقعاتك قبل انطلاق البطولة</p>
+      </div>
+      <div style="text-align:center;margin-bottom:1rem">
+        <button class="nav-btn" id="homeAdminBtn" style="padding:7px 14px;font-size:.8rem">⚙️ لوحة الإدارة</button>
+      </div>
+      <div class="grp-grid" id="homeGroups"></div>
+    </div>
+
+    <!-- ADMIN -->
+    <div id="SCR_ADMIN" style="display:none">
+      <div class="admin-top">
+        <div>
+          <div class="admin-title">⚙️ لوحة إدارة المجموعات</div>
+          <div class="admin-sub">كل مجموعة لها رابط خاص · البيانات تُحفظ في السحابة فوراً</div>
+        </div>
+        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          <div class="pw-row">
+            <input type="password" id="newPwd" class="pw-inp" placeholder="كلمة سر جديدة..." autocomplete="off"/>
+            <button class="btn-sm" id="changePwdBtn">🔑 تغيير</button>
+          </div>
+          <button class="btn-sm red" id="logoutBtn">🚪 خروج</button>
+        </div>
+      </div>
+
+      <div class="results-card">
+        <div class="card-head">
+          <span class="card-title">📊 النتائج الفعلية للبطولة</span>
+          <span class="shared-badge">🌍 مشتركة لجميع المجموعات</span>
+        </div>
+        <p class="notice">تُدخل هنا مرة واحدة فقط · تُطبَّق تلقائياً على جميع المجموعات</p>
+        <div id="adminActualEl"></div>
+      </div>
+
+      <div class="card">
+        <div class="sec-lbl">➕ إنشاء مجموعة جديدة</div>
+        <div class="add-row">
+          <div class="field"><label>اسم المجموعة *</label>
+            <input class="inp" id="newGrpName" type="text" placeholder="مثال: العائلة"/></div>
+          <div class="field"><label>وصف (اختياري)</label>
+            <input class="inp" id="newGrpDesc" type="text" placeholder="وصف قصير"/></div>
+          <button class="btn" id="createGrpBtn" style="align-self:flex-end">+ إنشاء</button>
+        </div>
+        <div class="quick-row" id="quickRow"></div>
+      </div>
+
+      <div class="card"><div class="sec-lbl">🗑️ إدارة المشاركين</div><div id="participantsAdmin"></div></div>
+
+      <div class="card">
+        <div class="sec-lbl">📂 المجموعات الحالية</div>
+        <div id="grpListEl" class="grp-list"></div>
+      </div>
+    </div>
+
+    <!-- PREDICTION -->
+    <div id="SCR_PRED" style="display:none">
+      <div id="bannLocked" class="locked-bar" style="display:none">
+        <span class="li">🔒</span>
+        <div><div class="lt">انتهى وقت التوقعات</div>
+        <div class="ls">أُغلق الباب في 11 يونيو 2026 الساعة 11 مساءً</div></div>
+      </div>
+      <div id="bannWarn" class="warn-bar" style="display:none">
+        <span>⚠️</span><span>تنبيه: أقل من 24 ساعة على إغلاق باب التوقعات!</span>
+      </div>
+      <div class="card">
+        <div class="sec-lbl">👥 أفراد المجموعة</div>
+        <div class="prow">
+          <input class="inp" id="pname" placeholder="أضف اسماً..."/>
+          <button class="btn" id="addBtn">+ إضافة</button>
+        </div>
+        <div style="margin-top:10px"><button class="btn" id="submitPredBtn">📤 إرسال التوقعات</button></div>
+        <div id="ptags" class="tags"></div>
+      </div>
+      <div id="mainContent" style="display:none">
+        <div class="card">
+          <div class="sec-lbl">🥇 الترتيب الحالي</div>
+          <div id="lbEl" class="lb"></div>
+        </div>
+        <div style="margin-bottom:.75rem">
+          <div class="sec-lbl">عرض توقعات:</div>
+          <div id="ptabsEl" class="ptabs"></div>
+        </div>
+        <div id="secsEl"></div>
+        <div class="legend">
+          <span class="leg pill-ok">✅ مركز صحيح = 5 نقاط</span>
+          <span class="leg pill-warn">🟡 تأهل بمركز مختلف = 3 نقاط</span>
+          <span class="leg pill-bad">❌ توقع خاطئ = 0</span>
+          <span class="leg badge">دور16=5·ربع=6·نصف=8·نهائي=10·بطل=15·وصيف=12·جوائز=10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sync" id="sync"></div>
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, set, get, update, onValue, off } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+// ══════════════════════════════════════════════
+//  FIREBASE CONFIG
+// ══════════════════════════════════════════════
+const firebaseConfig = {
+  apiKey: "AIzaSyBxrD1I-qVOOT6p-nliJhITi_itqMnS4nk",
+  authDomain: "wc2026-c227a.firebaseapp.com",
+  databaseURL: "https://wc2026-c227a-default-rtdb.firebaseio.com",
+  projectId: "wc2026-c227a",
+  storageBucket: "wc2026-c227a.firebasestorage.app",
+  messagingSenderId: "705263951285",
+  appId: "1:705263951285:web:197d8ad82889a31682cdfc"
+};
+const app = initializeApp(firebaseConfig);
+const db  = getDatabase(app);
+
+// ══════════════════════════════════════════════
+//  CONSTANTS
+// ══════════════════════════════════════════════
+const DEADLINE = new Date('2026-06-11T23:00:00+04:00');
+const DEF_PWD  = 'wc2026';
+const GRPS = ['A','B','C','D','E','F','G','H','I','J','K','L'];
+const GT = {
+  A:['المكسيك','جنوب أفريقيا','كوريا الجنوبية','التشيك'],
+  B:['كندا','البوسنة','قطر','سويسرا'],
+  C:['البرازيل','المغرب','هايتي','اسكتلندا'],
+  D:['أمريكا','باراغواي','أستراليا','تركيا'],
+  E:['ألمانيا','كوراساو','ساحل العاج','الإكوادور'],
+  F:['هولندا','اليابان','السويد','تونس'],
+  G:['بلجيكا','مصر','إيران','نيوزيلندا'],
+  H:['إسبانيا','الرأس الأخضر','السعودية','أوروغواي'],
+  I:['فرنسا','السنغال','العراق','النرويج'],
+  J:['الأرجنتين','الجزائر','النمسا','الأردن'],
+  K:['البرتغال','الكونغو','أوزبكستان','كولومبيا'],
+  L:['إنجلترا','كرواتيا','غانا','بنما'],
+};
+
+// ══════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════
+let curGid=null, players=[], preds={}, activeP='__view__', adminAct=null;
+let grpListener=null;
+const getPwd    = ()=> localStorage.getItem('wc26_pwd')||DEF_PWD;
+const savePwd   = (p)=> localStorage.setItem('wc26_pwd',p);
+const sessOk    = ()=> sessionStorage.getItem('wc26_admin')==='1';
+const sessSet   = ()=> sessionStorage.setItem('wc26_admin','1');
+const sessClear = ()=> sessionStorage.removeItem('wc26_admin');
+const isPast    = ()=> new Date()>DEADLINE;
+const newPred   = ()=>{const g={};GRPS.forEach(r=>g[r]={p1:'',p2:'',p3:''});return{groups:g,r16:Array(16).fill(''),qf:Array(8).fill(''),sf:Array(4).fill(''),f1:'',f2:'',w:'',ru:'',mvp:'',gk:'',top:''};};
+
+// ══════════════════════════════════════════════
+//  FIREBASE HELPERS
+// ══════════════════════════════════════════════
+const fbGet  = (path)=> get(ref(db,path)).then(s=>s.val());
+const fbSet  = (path,val)=> set(ref(db,path),val);
+const fbUpd  = (path,val)=> update(ref(db,path),val);
+const fbLive = (path,cb)=> { const r=ref(db,path); onValue(r,s=>cb(s.val())); return r; };
+
+function showSync(msg,type=''){
+  const el=document.getElementById('sync');
+  el.textContent=msg; el.className='sync show'+(type?' '+type:'');
+  setTimeout(()=>el.classList.remove('show'),2500);
+}
+
+// ══════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════
+window.addEventListener('load',async()=>{
+  startCountdown();
+  wireButtons();
+  // Check URL for group param
+  const gid=new URLSearchParams(location.search).get('g');
+  if(gid){
+    try{
+      const grp=await fbGet('groups/'+gid);
+      if(grp){curGid=gid;showApp();await showPredScreen({...grp,id:gid});return;}
+    }catch(e){}
+  }
+  showApp(); showHome();
+});
+
+function wireButtons(){
+  document.getElementById('lockBtn').addEventListener('click',tryUnlock);
+  document.getElementById('lockPwd').addEventListener('keydown',e=>{if(e.key==='Enter')tryUnlock();});
+  document.getElementById('btnHome').addEventListener('click',()=>{showApp();showHome();});
+  document.getElementById('btnAdmin').addEventListener('click',goAdmin);
+  document.getElementById('homeAdminBtn').addEventListener('click',goAdmin);
+  document.getElementById('changePwdBtn').addEventListener('click',changePwd);
+  document.getElementById('logoutBtn').addEventListener('click',()=>{sessClear();showApp();showHome();});
+  document.getElementById('createGrpBtn').addEventListener('click',createGrp);
+  document.getElementById('newGrpName').addEventListener('keydown',e=>{if(e.key==='Enter')createGrp();});
+  document.getElementById('addBtn').addEventListener('click',addPlayer);
+  const sp=document.getElementById('submitPredBtn'); if(sp) sp.addEventListener('click',submitPredictions);
+  document.getElementById('pname').addEventListener('keydown',e=>{if(e.key==='Enter')addPlayer();});
+}
+
+// ══════════════════════════════════════════════
+//  SCREENS
+// ══════════════════════════════════════════════
+function showApp(){
+  document.getElementById('SCR_LOAD').style.display='none';
+  document.getElementById('SCR_LOCK').style.display='none';
+  document.getElementById('SCR_APP').style.display='';
+}
+function showScreen(id){
+  ['SCR_HOME','SCR_ADMIN','SCR_PRED'].forEach(s=>
+    document.getElementById(s).style.display=s===id?'':'none'
+  );
+}
+async function showHome(){
+  showScreen('SCR_HOME');
+  document.getElementById('btnHome').style.display='none';
+  document.getElementById('btnAdmin').style.display='';
+  document.getElementById('grpPill').style.display='none';
+  document.getElementById('hSub').textContent='USA · Canada · Mexico · 48 فريق';
+  history.replaceState(null,'',location.pathname);
+  await renderHome();
+}
+async function goAdmin(){
+  if(sessOk()){showApp();await showAdminScreen();}
+  else{
+    document.getElementById('SCR_LOCK').style.display='';
+    document.getElementById('SCR_APP').style.display='none';
+    document.getElementById('lockPwd').value='';
+    document.getElementById('lockErr').textContent='';
+    setTimeout(()=>document.getElementById('lockPwd').focus(),100);
+  }
+}
+async function showAdminScreen(){
+  showScreen('SCR_ADMIN');
+  document.getElementById('btnHome').style.display='';
+  document.getElementById('btnAdmin').style.display='none';
+  document.getElementById('grpPill').style.display='none';
+  document.getElementById('hSub').textContent='⚙️ لوحة إدارة المجموعات';
+  adminAct=await fbGet('actual')||newPred();
+  renderActualForm();
+  await renderGrpList();
+  buildQuickBtns();
+  renderParticipantsAdmin();
+}
+async function showPredScreen(grp){
+  showScreen('SCR_PRED');
+  document.getElementById('btnHome').style.display='';
+  document.getElementById('btnAdmin').style.display='none';
+  const pill=document.getElementById('grpPill');
+  pill.textContent=grp.icon+' '+grp.name; pill.style.display='';
+  document.getElementById('hSub').textContent=grp.icon+' '+grp.name+(grp.desc?' · '+grp.desc:'');
+  // Update URL
+  const url=new URL(location.href);
+  url.searchParams.set('g',grp.id||curGid);
+  history.replaceState(null,'',url);
+  document.getElementById('bannLocked').style.display='none';
+  document.getElementById('bannWarn').style.display='none';
+  if(isPast()) document.getElementById('bannLocked').style.display='';
+  else if(DEADLINE-new Date()<86400000) document.getElementById('bannWarn').style.display='';
+  // Load group data live
+  if(grpListener) off(grpListener);
+  grpListener = fbLive('grpdata/'+(grp.id||curGid), data=>{
+    players=(data&&data.players)?Object.values(data.players):[];
+    preds={};
+    if(data&&data.preds) Object.entries(data.preds).forEach(([k,v])=>preds[k]=v);
+    if(!players.includes(activeP)) activeP=players[0]||'__view__';
+    document.getElementById('mainContent').style.display=players.length?'':'none';
+    renderAll();
+  });
+}
+
+// ══════════════════════════════════════════════
+//  LOCK / PASSWORD
+// ══════════════════════════════════════════════
+let lockTries=0;
+function tryUnlock(){
+  if(lockTries>=5){document.getElementById('lockErr').textContent='⛔ تم الحظر · أعد فتح الصفحة';return;}
+  const v=document.getElementById('lockPwd').value;
+  if(v===getPwd()){
+    sessSet();lockTries=0;
+    document.getElementById('lockPwd').value='';
+    document.getElementById('lockErr').textContent='';
+    showApp();showAdminScreen();
+  } else {
+    lockTries++;
+    document.getElementById('lockErr').textContent='❌ كلمة سر خاطئة · '+(5-lockTries)+' محاولات متبقية';
+    document.getElementById('lockPwd').value='';
+  }
+}
+function changePwd(){
+  const v=document.getElementById('newPwd').value.trim();
+  if(v.length<4){toast('⚠️ كلمة السر 4 أحرف على الأقل');return;}
+  savePwd(v);document.getElementById('newPwd').value='';
+  toast('✅ تم تغيير كلمة السر');
+}
+
+// ══════════════════════════════════════════════
+//  HOME
+// ══════════════════════════════════════════════
+async function renderHome(){
+  const el=document.getElementById('homeGroups');
+  el.innerHTML='<div style="text-align:center;padding:2rem;color:#6e7681;grid-column:1/-1"><div class="spinner" style="margin:0 auto"></div></div>';
+  const grps=await fbGet('groups')||{};
+  const arr=Object.entries(grps).map(([id,g])=>({...g,id}));
+  if(!arr.length){
+    el.innerHTML='<div style="text-align:center;padding:2rem;color:#6e7681;grid-column:1/-1"><div style="font-size:2rem;margin-bottom:.4rem">📭</div><div>لا توجد مجموعات بعد</div></div>';
+    return;
+  }
+  el.innerHTML=arr.map(g=>{
+    return`<div class="grp-card" data-gid="${xe(g.id)}">
+      <div class="grp-ico">${g.icon}</div>
+      <div class="grp-nm">${esc(g.name)}</div>
+      <div class="grp-dc">${esc(g.desc||'')}</div>
+      <div class="grp-ft">
+        <span class="grp-cnt">← اضغط للدخول</span>
+        <span class="grp-arr">دخول →</span>
+      </div>
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.grp-card[data-gid]').forEach(card=>{
+    card.addEventListener('click',async()=>{
+      const gid=card.dataset.gid;
+      const grp=await fbGet('groups/'+gid);
+      if(grp){curGid=gid;await showPredScreen({...grp,id:gid});}
+    });
+  });
+}
+
+// ══════════════════════════════════════════════
+//  GROUP MANAGER
+// ══════════════════════════════════════════════
+function genCode(){
+  const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  return Array.from({length:4},()=>c[Math.floor(Math.random()*c.length)]).join('');
+}
+function buildQuickBtns(){
+  const presets=[
+    {n:'العائلة',i:'👨‍👩‍👧'},{n:'الأصدقاء',i:'👫'},{n:'العمل',i:'💼'},
+    {n:'المدرسة',i:'🎓'},{n:'الجيران',i:'🏘️'},{n:'الأقارب',i:'🤝'},
+    {n:'الزملاء',i:'🏢'},{n:'النادي',i:'⚽'},
+  ];
+  const row=document.getElementById('quickRow');
+  if(!row)return;
+  row.innerHTML='<span style="font-size:.66rem;color:#6e7681;align-self:center">إضافة سريعة ←</span>';
+  presets.forEach(p=>{
+    const btn=document.createElement('button');
+    btn.className='btn-sm'; btn.textContent=p.i+' '+p.n;
+    btn.addEventListener('click',()=>_mkGrp(p.n,'',p.i));
+    row.appendChild(btn);
+  });
+}
+async function createGrp(){
+  const name=document.getElementById('newGrpName').value.trim();
+  if(!name){toast('⚠️ أدخل اسم المجموعة');return;}
+  await _mkGrp(name,document.getElementById('newGrpDesc').value.trim(),'👥');
+  document.getElementById('newGrpName').value='';
+  document.getElementById('newGrpDesc').value='';
+  document.getElementById('newGrpName').focus();
+}
+async function _mkGrp(name,desc,icon){
+  const existing=await fbGet('groups')||{};
+  if(Object.values(existing).find(g=>g.name===name)){toast('⚠️ الاسم موجود مسبقاً');return;}
+  const id='g'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+  const pageUrl=location.href.split('?')[0]+'?g='+id;
+  await fbSet('groups/'+id,{name,desc,icon,id,link:pageUrl});
+  toast('✅ تمت إضافة مجموعة '+name);
+  await renderGrpList();
+}
+async function delGrp(id){
+  if(!confirm('حذف المجموعة وجميع بياناتها؟'))return;
+  await fbSet('groups/'+id,null);
+  await fbSet('grpdata/'+id,null);
+  await renderGrpList();
+  toast('🗑️ تم الحذف');
+}
+function copyLink(url,btn){
+  navigator.clipboard.writeText(url)
+    .then(()=>{const t=btn.textContent;btn.textContent='✅ تم';setTimeout(()=>btn.textContent=t,2000);toast('✅ تم نسخ الرابط');})
+    .catch(()=>toast('⚠️ انسخ الرابط يدوياً'));
+}
+async function renderGrpList(){
+  const el=document.getElementById('grpListEl');
+  el.innerHTML='<p class="notice">جارٍ التحميل...</p>';
+  const grps=await fbGet('groups')||{};
+  const arr=Object.entries(grps).map(([id,g])=>({...g,id}));
+  if(!arr.length){el.innerHTML='<p class="notice">لا توجد مجموعات بعد.</p>';return;}
+  el.innerHTML=arr.map(g=>{
+    const link=g.link||location.href.split('?')[0]+'?g='+g.id;
+    return`<div class="grp-item">
+      <div class="gi-top">
+        <div class="gi-left">
+          <span class="gi-emoji">${g.icon}</span>
+          <div>
+            <div class="gi-name">${esc(g.name)}${g.desc?` <span style="font-size:.65rem;color:#6e7681">· ${esc(g.desc)}</span>`:''}</div>
+          </div>
+        </div>
+        <div class="gi-right">
+          <button class="btn-sm ok" data-openid="${xe(g.id)}">📂 فتح</button>
+          <button class="btn-sm red" data-delid="${xe(g.id)}">🗑️ حذف</button>
+        </div>
+      </div>
+      <div class="link-box">
+        <span style="font-size:.65rem;color:#6e7681">🔗 رابط المجموعة:</span>
+        <span class="link-val">${link}</span>
+        <button class="btn-sm" data-copylink="${xe(link)}">📋 نسخ</button>
+      </div>
+    </div>`;
+  }).join('');
+  el.querySelectorAll('[data-openid]').forEach(b=>b.addEventListener('click',async()=>{
+    const gid=b.dataset.openid;curGid=gid;
+    const grp=await fbGet('groups/'+gid);
+    if(grp)await showPredScreen({...grp,id:gid});
+  }));
+  el.querySelectorAll('[data-delid]').forEach(b=>b.addEventListener('click',()=>delGrp(b.dataset.delid)));
+  el.querySelectorAll('[data-copylink]').forEach(b=>b.addEventListener('click',()=>copyLink(b.dataset.copylink,b)));
+}
+
+// ══════════════════════════════════════════════
+//  ACTUAL RESULTS (admin)
+// ══════════════════════════════════════════════
+function renderActualForm(){
+  const src=adminAct; let h='';
+  h+=`<div class="sec-lbl" style="margin-bottom:6px">📋 دور المجموعات</div>
+    <div class="ggrid" style="margin-bottom:10px">`;
+  GRPS.forEach(g=>{
+    const gp=src.groups[g]||{p1:'',p2:'',p3:''},ts=GT[g]||[];
+    h+=`<div class="gbox"><div class="glabel">المجموعة ${g}</div>
+      <div class="rrow"><span class="rpill r1">أول</span>${msel(ts.filter(t=>t!==gp.p2&&t!==gp.p3||t===gp.p1),gp.p1,'aG_'+g+'_p1')}</div>
+      <div class="rrow"><span class="rpill r2">ثاني</span>${msel(ts.filter(t=>t!==gp.p1&&t!==gp.p3||t===gp.p2),gp.p2,'aG_'+g+'_p2')}</div>
+      <div class="rrow"><span class="rpill r3">ثالث</span>${msel(ts.filter(t=>t!==gp.p1&&t!==gp.p2||t===gp.p3),gp.p3,'aG_'+g+'_p3')}</div>
+    </div>`;
+  });
+  h+=`</div>`;
+  h+=mkARnd(src,'r16','🔵 دور الـ 16',16,qualT(src),'5 نقاط');
+  h+=mkARnd(src,'qf','🟡 ربع النهائي',8,rndT(src,'r16'),'6 نقاط');
+  h+=mkARnd(src,'sf','🟠 نصف النهائي',4,rndT(src,'qf'),'8 نقاط');
+  const q4=rndT(src,'sf'),wP=[src.f1,src.f2].filter(Boolean).length?[src.f1,src.f2].filter(Boolean):q4;
+  h+=`<div style="margin-bottom:10px"><div class="sec-lbl">🏆 النهائي والبطل</div>
+    ${!q4.length?'<p class="notice">أكمل نصف النهائي أولاً</p>':`
+    <div class="fgrid">
+      <div><div class="flabel">طرف 1</div>${msel(q4.filter(t=>t!==src.f2||!src.f2),src.f1,'aF_f1')}</div>
+      <div><div class="flabel">طرف 2</div>${msel(q4.filter(t=>t!==src.f1||!src.f1),src.f2,'aF_f2')}</div>
+      <div><div class="flabel">🥇 البطل</div>${msel(wP,src.w,'aF_w')}</div>
+      <div><div class="flabel">🥈 الوصيف</div>${msel(wP.filter(t=>!src.w||t!==src.w),src.ru,'aF_ru')}</div>
+    </div>`}</div>`;
+  const aw=[{id:'mvp',l:'أفضل لاعب',ic:'⭐'},{id:'gk',l:'أفضل حارس',ic:'🧤'},{id:'top',l:'هداف البطولة',ic:'⚽'}];
+  h+=`<div><div class="sec-lbl">🎖️ جوائز البطولة</div><div class="agrid">`;
+  aw.forEach(a=>{h+=`<div class="abox"><div class="flabel">${a.ic} ${a.l}</div>
+    <input class="ainp" type="text" value="${esc(src[a.id]||'')}" placeholder="اسم اللاعب..." data-af="${a.id}"/></div>`;});
+  h+=`</div></div>`;
+  const el=document.getElementById('adminActualEl'); el.innerHTML=h;
+  GRPS.forEach(g=>['p1','p2','p3'].forEach(rank=>{
+    const s=el.querySelector(`[data-id="aG_${g}_${rank}"]`);
+    if(s)s.addEventListener('change',()=>aG(g,rank,s.value));
+  }));
+  ['r16','qf','sf'].forEach(id=>{el.querySelectorAll(`[data-id^="aR_${id}_"]`).forEach(s=>{
+    s.addEventListener('change',()=>aR(id,parseInt(s.dataset.idx),s.value));});});
+  ['f1','f2','w','ru'].forEach(f=>{const s=el.querySelector(`[data-id="aF_${f}"]`);if(s)s.addEventListener('change',()=>aF(f,s.value));});
+  aw.forEach(a=>{const i=el.querySelector(`[data-af="${a.id}"]`);if(i)i.addEventListener('change',()=>aF(a.id,i.value));});
+}
+function mkARnd(src,id,lbl,slots,pool,pts){
+  const arr=src[id]||[];
+  let h=`<div style="margin-bottom:10px"><div class="sec-lbl">${lbl} <span class="badge">${pts}</span></div>`;
+  if(!pool.length)h+='<p class="notice">أكمل المرحلة السابقة أولاً</p>';
+  else{h+='<div class="rgrid">';
+    for(let i=0;i<slots;i++){const v=arr[i]||'',used=arr.filter((_,j)=>j!==i&&_);
+      h+=`<div class="slot"><span class="snum">${i+1}</span>${msel(pool.filter(t=>!used.includes(t)||t===v),v,'aR_'+id+'_'+i,false,false,i)}</div>`;}
+    h+='</div>';}
+  return h+'</div>';
+}
+async function aG(g,rank,v){
+  if(!adminAct.groups[g])adminAct.groups[g]={p1:'',p2:'',p3:''};
+  adminAct.groups[g][rank]=v;
+  adminAct.r16=Array(16).fill('');adminAct.qf=Array(8).fill('');adminAct.sf=Array(4).fill('');
+  adminAct.f1='';adminAct.f2='';adminAct.w='';adminAct.ru='';
+  await fbSet('actual',adminAct);renderActualForm();showSync('✅ تم الحفظ','ok');
+}
+async function aR(id,i,v){
+  if(!adminAct[id])adminAct[id]=[];adminAct[id][i]=v;
+  const ord=['r16','qf','sf'],idx=ord.indexOf(id);
+  if(idx>=0){for(let j=idx+1;j<ord.length;j++)adminAct[ord[j]]=Array({r16:16,qf:8,sf:4}[ord[j]]).fill('');adminAct.f1='';adminAct.f2='';adminAct.w='';adminAct.ru='';}
+  await fbSet('actual',adminAct);renderActualForm();showSync('✅ تم الحفظ','ok');
+}
+async function aF(f,v){adminAct[f]=v;await fbSet('actual',adminAct);showSync('✅ تم الحفظ','ok');}
+
+// ══════════════════════════════════════════════
+//  PREDICTION
+// ══════════════════════════════════════════════
+const getSrc  = ()=> activeP==='__view__'?(adminAct||newPred()):(preds[activeP]||newPred());
+const isView  = ()=> activeP==='__view__';
+const disEdit = ()=> isView()||isPast();
+
+async function persist(){
+  if(!curGid)return;
+  showSync('⏳ جارٍ الحفظ...');
+  try{
+    const data={players,preds};
+    await fbSet('grpdata/'+curGid,data);
+    showSync('✅ تم الحفظ في السحابة','ok');
+  }catch(e){showSync('❌ خطأ في الحفظ','err');}
+}
+
+async function addPlayer(){
+  if(isPast()){toast('🔒 انتهى وقت التوقعات');return;}
+  const n=document.getElementById('pname').value.trim();
+  if(!n||players.includes(n))return;
+  players.push(n);preds[n]=newPred();
+  document.getElementById('pname').value='';
+  if(activeP==='__view__')activeP=n;
+  document.getElementById('mainContent').style.display='';
+  await persist();
+}
+async function removePlayer(n){
+  if(isPast()){toast('🔒 انتهى وقت التوقعات');return;}
+  players=players.filter(p=>p!==n);delete preds[n];
+  if(activeP===n)activeP=players[0]||'__view__';
+  if(!players.length)document.getElementById('mainContent').style.display='none';
+  await persist();
+}
+function setActive(k){activeP=k;renderAll();}
+
+async function getActualLive(){return await fbGet('actual')||newPred();}
+
+async function calcScore(p){
+  const pr=preds[p];if(!pr)return 0;
+  const ac=await getActualLive();let pts=0;
+  const acT3=GRPS.map(g=>(ac.groups[g]||{}).p3).filter(Boolean);
+  GRPS.forEach(g=>{
+    const pp=pr.groups[g]||{},pa=ac.groups[g]||{},acQ=[pa.p1,pa.p2,pa.p3].filter(Boolean);
+    ['p1','p2'].forEach(rk=>{if(!pp[rk])return;if(pp[rk]===pa[rk])pts+=5;else if(acQ.includes(pp[rk]))pts+=3;});
+    if(pp.p3){if(pp.p3===pa.p3)pts+=5;else if(acT3.includes(pp.p3))pts+=3;}
+  });
+  (pr.r16||[]).forEach(t=>{if(t&&(ac.r16||[]).includes(t))pts+=5;});
+  (pr.qf||[]).forEach(t=>{if(t&&(ac.qf||[]).includes(t))pts+=6;});
+  (pr.sf||[]).forEach(t=>{if(t&&(ac.sf||[]).includes(t))pts+=8;});
+  const acF=[ac.f1,ac.f2].filter(Boolean);
+  if(pr.f1&&acF.includes(pr.f1))pts+=10;if(pr.f2&&acF.includes(pr.f2))pts+=10;
+  if(pr.w&&pr.w===ac.w)pts+=15;if(pr.ru&&pr.ru===ac.ru)pts+=12;
+  ['mvp','gk','top'].forEach(a=>{if(pr[a]&&pr[a]===ac[a])pts+=10;});
+  return pts;
+}
+
+function renderAll(){renderTags();renderTabs();renderLbAsync();renderSecsAsync();}
+
+function renderTags(){
+  const locked=isPast();
+  const pi=document.getElementById('pname'),pb=document.getElementById('addBtn');
+  if(pi){pi.disabled=locked;pi.placeholder=locked?'🔒 انتهى وقت التوقعات':'أضف اسماً...';}
+  if(pb)pb.disabled=locked;
+  document.getElementById('ptags').innerHTML=players.map(p=>
+    `<span class="tag">${esc(p)}${locked?'':'<span class="x" data-rm="'+xe(p)+'">×</span>'}</span>`
+  ).join('');
+  document.querySelectorAll('.x[data-rm]').forEach(x=>x.addEventListener('click',()=>removePlayer(x.dataset.rm)));
+}
+function renderTabs(){
+  const tabs=[{l:'📊 عرض النتائج',k:'__view__'},...players.map(p=>({l:p,k:p}))];
+  const el=document.getElementById('ptabsEl');
+  el.innerHTML=tabs.map(t=>`<span class="ptab${activeP===t.k?' active':''}" data-tab="${xe(t.k)}">${esc(t.l)}</span>`).join('');
+  el.querySelectorAll('[data-tab]').forEach(s=>s.addEventListener('click',()=>setActive(s.dataset.tab)));
+}
+async function renderLbAsync(){
+  const el=document.getElementById('lbEl');
+  if(!players.length){el.innerHTML='';return;}
+  const scores=await Promise.all(players.map(async p=>({n:p,pts:await calcScore(p)})));
+  scores.sort((a,b)=>b.pts-a.pts);
+  const mx=scores[0].pts,med=['🥇','🥈','🥉'];
+  el.innerHTML=scores.map((s,i)=>
+    `<div class="lb-c${s.pts===mx&&mx>0?' top':''}">
+      <div class="lb-nm">${med[i]||''} ${esc(s.n)}</div>
+      <div class="lb-pts">${s.pts}</div><div class="lb-sub">نقطة</div>
+    </div>`
+  ).join('');
+}
+async function renderSecsAsync(){
+  const ac=await getActualLive();
+  if(!adminAct)adminAct=ac;
+  const src=getSrc(),dis=disEdit();
+  const t3=GRPS.filter(g=>src.groups[g].p3).length,t3full=!dis&&t3>=8;
+  const el=document.getElementById('secsEl');
+  let h='';
+  h+=`<div class="card"><div class="card-head"><span class="card-title">📋 دور المجموعات</span>
+    <span class="badge">مركز صحيح 5 · تأهل بمختلف 3</span></div>
+    <p class="notice">${isView()?'النتائج الفعلية — قراءة فقط':isPast()?'🔒 مغلق — قراءة فقط':`اختر الأول والثاني من كل مجموعة · أفضل 8 من المراكز الثالثة (${t3}/8)`}</p>`;
+  if(!dis)h+=t3>=8
+    ?`<span class="leg pill-bad" style="display:inline-block;margin-bottom:7px">🔒 الفرق الثالثة 8/8</span><br>`
+    :`<span class="leg pill-ok" style="display:inline-block;margin-bottom:7px">⚽ الفرق الثالثة: ${t3}/8</span><br>`;
+  h+='<div class="ggrid">';
+  GRPS.forEach(g=>{
+    const gp=src.groups[g]||{p1:'',p2:'',p3:''},ts=GT[g]||[],d3=dis||(t3full&&!gp.p3);
+    h+=`<div class="gbox"><div class="glabel">⚽ المجموعة ${g}</div>
+      <div class="rrow"><span class="rpill r1">أول</span>${msel(ts.filter(t=>t!==gp.p2&&t!==gp.p3||t===gp.p1),gp.p1,'pG_'+g+'_p1',false,dis,0,gCls(gp.p1,'p1',g,ac))}</div>
+      <div class="rrow"><span class="rpill r2">ثاني</span>${msel(ts.filter(t=>t!==gp.p1&&t!==gp.p3||t===gp.p2),gp.p2,'pG_'+g+'_p2',false,dis,0,gCls(gp.p2,'p2',g,ac))}</div>
+      <div class="rrow"><span class="rpill r3">ثالث</span>${msel(ts.filter(t=>t!==gp.p1&&t!==gp.p2||t===gp.p3),gp.p3,'pG_'+g+'_p3',false,d3,0,gCls(gp.p3,'p3',g,ac))}</div>
+    </div>`;
+  });
+  h+='</div></div>';
+  h+=mkPRnd(src,ac,dis,'r16','🔵 دور الـ 16',16,qualT(src),'5 نقاط / فريق');
+  h+=mkPRnd(src,ac,dis,'qf','🟡 ربع النهائي',8,rndT(src,'r16'),'6 نقاط / فريق');
+  h+=mkPRnd(src,ac,dis,'sf','🟠 نصف النهائي',4,rndT(src,'qf'),'8 نقاط / فريق');
+  const q4=rndT(src,'sf'),acF=[ac.f1,ac.f2].filter(Boolean);
+  const wP=[src.f1,src.f2].filter(Boolean).length?[src.f1,src.f2].filter(Boolean):q4;
+  h+=`<div class="card"><div class="card-head"><span class="card-title">🏆 النهائي والبطل</span></div>
+    ${!q4.length?'<p class="notice">أكمل نصف النهائي أولاً</p>':`
+    <div class="fgrid">
+      <div><div class="flabel"><span class="badge">10 نقاط</span> طرف 1</div>${msel(q4.filter(t=>t!==src.f2||!src.f2),src.f1,'pF_f1',false,dis,0,rCls(src.f1,acF))}</div>
+      <div><div class="flabel"><span class="badge">10 نقاط</span> طرف 2</div>${msel(q4.filter(t=>t!==src.f1||!src.f1),src.f2,'pF_f2',false,dis,0,rCls(src.f2,acF))}</div>
+      <div><div class="flabel"><span class="badge">15 نقطة</span> 🥇 البطل</div>${msel(wP,src.w,'pF_w',false,dis,0,(!dis&&ac.w)?(src.w===ac.w?'sc':'sw'):'')}</div>
+      <div><div class="flabel"><span class="badge">12 نقطة</span> 🥈 الوصيف</div>${msel(wP.filter(t=>!src.w||t!==src.w),src.ru,'pF_ru',false,dis,0,(!dis&&ac.ru)?(src.ru===ac.ru?'sc':'sw'):'')}</div>
+    </div>`}</div>`;
+  const aw=[{id:'mvp',l:'أفضل لاعب',ic:'⭐'},{id:'gk',l:'أفضل حارس',ic:'🧤'},{id:'top',l:'هداف البطولة',ic:'⚽'}];
+  h+=`<div class="card"><div class="card-head"><span class="card-title">🎖️ جوائز البطولة</span><span class="badge">10 نقاط / جائزة</span></div>
+    <div class="agrid">`;
+  aw.forEach(a=>{
+    const v=src[a.id]||'',cls=(!dis&&ac[a.id])?(v===ac[a.id]?'sc':'sw'):'';
+    h+=`<div class="abox"><div class="flabel">${a.ic} ${a.l}</div>
+      <input class="ainp ${cls}" type="text" value="${esc(v)}" placeholder="اسم اللاعب..." data-pf="${a.id}" ${dis?'disabled':''}/></div>`;
+  });
+  h+=`</div></div>`;
+  el.innerHTML=h;
+  if(!dis){
+    GRPS.forEach(g=>['p1','p2','p3'].forEach(rank=>{
+      const s=el.querySelector(`[data-id="pG_${g}_${rank}"]`);
+      if(s)s.addEventListener('change',()=>pG(g,rank,s.value));
+    }));
+    ['r16','qf','sf'].forEach(id=>{el.querySelectorAll(`[data-id^="pR_${id}_"]`).forEach(s=>{
+      s.addEventListener('change',()=>pR(id,parseInt(s.dataset.idx),s.value));});});
+    ['f1','f2','w','ru'].forEach(f=>{const s=el.querySelector(`[data-id="pF_${f}"]`);if(s)s.addEventListener('change',()=>pF(f,s.value));});
+    aw.forEach(a=>{const i=el.querySelector(`[data-pf="${a.id}"]`);if(i)i.addEventListener('change',()=>pF(a.id,i.value));});
+  }
+}
+function mkPRnd(src,ac,dis,id,lbl,slots,pool,pts){
+  const arr=src[id]||[],acArr=ac[id]||[];
+  let h=`<div class="card"><div class="card-head"><span class="card-title">${lbl}</span><span class="badge">${pts}</span></div>`;
+  if(!pool.length)h+='<p class="notice">أكمل المرحلة السابقة أولاً</p>';
+  else{h+='<div class="rgrid">';
+    for(let i=0;i<slots;i++){const v=arr[i]||'',used=arr.filter((_,j)=>j!==i&&_);
+      h+=`<div class="slot"><span class="snum">${i+1}</span>${msel(pool.filter(t=>!used.includes(t)||t===v),v,'pR_'+id+'_'+i,false,dis,i,rCls(v,acArr))}</div>`;}
+    h+='</div>';}
+  return h+'</div>';
+}
+async function pG(g,rank,v){
+  if(isPast()){toast('🔒 انتهى وقت التوقعات');return;}
+  const s=getSrc();if(!s.groups[g])s.groups[g]={p1:'',p2:'',p3:''};
+  if(rank==='p3'&&v&&GRPS.filter(gg=>s.groups[gg].p3).length>=8&&!s.groups[g].p3)return;
+  s.groups[g][rank]=v;s.r16=Array(16).fill('');s.qf=Array(8).fill('');s.sf=Array(4).fill('');s.f1='';s.f2='';s.w='';s.ru='';
+  await persist();
+}
+async function pR(id,i,v){
+  if(isPast()){toast('🔒 انتهى وقت التوقعات');return;}
+  const s=getSrc();if(!s[id])s[id]=[];s[id][i]=v;
+  const ord=['r16','qf','sf'],idx=ord.indexOf(id);
+  if(idx>=0){for(let j=idx+1;j<ord.length;j++)s[ord[j]]=Array({r16:16,qf:8,sf:4}[ord[j]]).fill('');s.f1='';s.f2='';s.w='';s.ru='';}
+  await persist();
+}
+async function pF(f,v){if(isPast()){toast('🔒 انتهى وقت التوقعات');return;}getSrc()[f]=v;await persist();}
+
+
+async function submitPredictions(){
+  if(!players.length){toast('⚠️ أضف مشاركاً أولاً');return;}
+  await persist();
+  toast('✅ تم إرسال التوقعات بنجاح');
+}
+async function renderParticipantsAdmin(){
+ const el=document.getElementById('participantsAdmin');
+ if(!el) return;
+ const groups=await fbGet('groups')||{};
+ let h='';
+ for(const gid of Object.keys(groups)){
+   const data=await fbGet('grpdata/'+gid)||{};
+   const ps=(data.players)||[];
+   h+=`<div class="notice"><b>${groups[gid].name}</b><br>`+
+   ps.map(n=>`<button class="btn-sm red" onclick="window.delParticipantAdmin('${gid}','${n}')">حذف ${n}</button>`).join(' ')+'</div>';
+ }
+ el.innerHTML=h||'لا يوجد مشاركون';
+}
+window.delParticipantAdmin=async function(gid,n){
+ const data=await fbGet('grpdata/'+gid)||{};
+ data.players=(data.players||[]).filter(x=>x!==n);
+ if(data.preds) delete data.preds[n];
+ await fbSet('grpdata/'+gid,data);
+ toast('🗑️ تم حذف المشارك');
+ renderParticipantsAdmin();
+}
+
+// ══════════════════════════════════════════════
+//  HELPERS
+// ══════════════════════════════════════════════
+function qualT(src){
+  let t=[];
+  GRPS.forEach(g=>{if(src.groups[g].p1)t.push(src.groups[g].p1);if(src.groups[g].p2)t.push(src.groups[g].p2);});
+  GRPS.map(g=>src.groups[g].p3).filter(Boolean).slice(0,8).forEach(x=>t.push(x));
+  return[...new Set(t)];
+}
+const rndT=(src,id)=>(src[id]||[]).filter(Boolean);
+function gCls(v,rank,g,ac){
+  if(!v)return'';
+  const pa=ac.groups[g]||{},acQ=[pa.p1,pa.p2,pa.p3].filter(Boolean);
+  if(rank==='p3'){const acT3=GRPS.map(gg=>(ac.groups[gg]||{}).p3).filter(Boolean);if(!acT3.length)return'';return v===pa.p3?'sc':acT3.includes(v)?'sp':'sw';}
+  if(!acQ.length)return'';return v===pa[rank]?'sc':acQ.includes(v)?'sp':'sw';
+}
+const rCls=(v,ac)=>(!v||!ac.filter(Boolean).length)?'':ac.includes(v)?'sc':'sw';
+function msel(teams,sel,dataId,_c,dis,idx,cls){
+  return`<select class="${cls||''}" data-id="${dataId}" data-idx="${idx||0}" ${dis?'disabled':''}>
+    <option value="">— اختر —</option>
+    ${teams.map(t=>`<option value="${xe(t)}"${sel===t?' selected':''}>${t}</option>`).join('')}
+  </select>`;
+}
+const xe=s=>String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+
+// ══════════════════════════════════════════════
+//  COUNTDOWN
+// ══════════════════════════════════════════════
+function startCountdown(){
+  function tick(){
+    const ms=DEADLINE-new Date(),bar=document.getElementById('dlBar');if(!bar)return;
+    if(ms<=0){bar.classList.add('expired');['cdD','cdH','cdM','cdS'].forEach(id=>document.getElementById(id).textContent='00');return;}
+    const d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),m=Math.floor(ms%3600000/60000),s=Math.floor(ms%60000/1000);
+    document.getElementById('cdD').textContent=p2(d);document.getElementById('cdH').textContent=p2(h);
+    document.getElementById('cdM').textContent=p2(m);document.getElementById('cdS').textContent=p2(s);
+    if(ms<3600000)bar.classList.add('urgent');
+  }
+  tick();setInterval(tick,1000);
+}
+const p2=n=>String(n).padStart(2,'0');
+</script>
+</body>
+</html>
